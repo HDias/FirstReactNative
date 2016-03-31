@@ -17,16 +17,15 @@ import React, {
 var Firebase = require('firebase');
 
 class devdactic_react extends Component {
-  construct(props) {
-    super(propos);
-    var myFirebaseRef = new Firebase('https://resplendent-fire-5136.firebaseio.com')
+  constructor(props) {
+    super(props);
+    var myFirebaseRef = new Firebase("https://resplendent-fire-5136.firebaseio.com/")
 
     myFirebaseRef.set({
       title: 'Hello world"',
-      autho: 'Horecio'
+      author: 'Horecio'
     });
-  }
-
+  };
 
   render() {
     return (
@@ -43,9 +42,25 @@ class devdactic_react extends Component {
       </View>
     );
   }
-}
+};
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
 });
 
 AppRegistry.registerComponent('devdactic_react', () => devdactic_react);
