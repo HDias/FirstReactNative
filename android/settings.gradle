@@ -1,0 +1,3 @@
+rootProject.name = 'devdactic_react'
+
+include ':app'
